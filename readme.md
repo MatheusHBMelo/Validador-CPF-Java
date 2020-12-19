@@ -1,10 +1,6 @@
-<center><b><font face="Helvetica" size="6">Olá, este repositório é referente a uma atividade sobre a linguagem Java<br><br> “Sistema para validação de CPF”<br><hr></font></b></center>
+# Olá, este repositório é referente a uma atividade sobre a linguagem Java
 
-
-
-<center><b><font face="Helvetica" size="5">Considerações</font></b></center>
-
-
+## “Sistema para validação de CPF”
 
 ### Informações sobre o código:
 
