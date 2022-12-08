@@ -6,7 +6,7 @@
 
 * Desenvolvido em dois ambientes, [Visual Studio Code](https://code.visualstudio.com/) e [GDB online Debugger](https://www.onlinegdb.com/)
 * Nesse modelo, o número do CPF é predefinido dentro da estrutura do código
-* O código ainda não difere CPFs validos, porem não funcionais Ex:(111.111.11...)
+* O código ainda não difere CPFs validos, porem não funcionais Ex.:(111.111.11...)
 
 ### Tecnologia usadas:
 
