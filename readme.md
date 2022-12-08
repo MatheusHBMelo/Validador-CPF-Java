@@ -1,6 +1,6 @@
 # Olá, este repositório é referente a uma atividade sobre a linguagem Java
 
-## “Sistema para validação de CPF”
+## “Código para validação de CPF”
 
 ### Informações sobre o código:
 
