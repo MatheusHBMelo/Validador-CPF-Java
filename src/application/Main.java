@@ -1,5 +1,9 @@
 /*
-	// Estudado e contruido por Matheus HB Melo - ADS/SENAC
+	Disciplina: Linguagens e tecnicas de programação para WEB
+	Aluno: Matheus Henrique Barbosa de Melo
+	Data: 09/06/2020
+
+	Refatoração: 08/01/2022
  */
 
 package application;
