@@ -3,11 +3,9 @@ package validator;
 public class ValidatorCpf {
 
     public static void validatecpf(String cpf){
-
-        if (cpf.length() != 11){
-            System.out.println("Inválido, o CPF deve possuir 11 digitos.");
-            System.exit(0);
-        }
+        cpf = retiraCaracteresEspeciais(cpf);
+        validaConteudoDoCPF(cpf);
+        validaNumerosRepetidos(cpf);
 
         String s1 = cpf.substring(0, 1); int n1 = Integer.parseInt(s1);
         String s2 = cpf.substring(1, 2); int n2 = Integer.parseInt(s2);
@@ -18,11 +16,6 @@ public class ValidatorCpf {
         String s7 = cpf.substring(6, 7); int n7 = Integer.parseInt(s7);
         String s8 = cpf.substring(7, 8); int n8 = Integer.parseInt(s8);
         String s9 = cpf.substring(8, 9); int n9 = Integer.parseInt(s9);
-
-        if (s1.equals(s2) && s2.equals(s3) && s3.equals(s4) && s4.equals(s5) && s5.equals(s6) && s6.equals(s7) && s7.equals(s8) && s8.equals(s9)){
-            System.out.println("Inválido, o CPF digitado possui os 11 digitos iguais");
-            System.exit(0);
-        }
 
         int digito1 = (n1 * 10 + n2 * 9 + n3 * 8 + n4 * 7 + n5 * 6 + n6 * 5 + n7 * 4 + n8 * 3 + n9 * 2);
         if ((digito1 % 11) < 2) {
@@ -46,6 +39,34 @@ public class ValidatorCpf {
             System.out.println("CPF válido!");
         } else {
             System.out.println("CPF inválido!");
+        }
+    }
+
+    public static String retiraCaracteresEspeciais(String cpf){
+        cpf = cpf.replaceAll("\\.|-| |[a-zA-Z]", "");
+        return cpf;
+    }
+
+    public static void validaConteudoDoCPF(String cpf){
+        if (cpf.length() != 11){
+            System.out.println("Inválido, o CPF deve possuir 11 digitos.");
+            System.exit(0);
+        }
+    }
+
+    public static void validaNumerosRepetidos(String cpf){
+        char temp = cpf.charAt(0);
+        boolean repetido = false;
+        for (int i = 1; i < cpf.length(); i++) {
+            if (temp == cpf.charAt(i)){
+                repetido = true;
+            }else {
+                repetido = false;
+            }
+        }
+        if (repetido){
+            System.out.println("Inválido, o CPF digitado possui todos os digitos iguais.");
+            System.exit(0);
         }
     }
 }

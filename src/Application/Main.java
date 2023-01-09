@@ -10,11 +10,17 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 
-		System.out.print("Digite o CPF que deseja validar: ");
-		String cpf = sc.nextLine();
+		try {
+			Scanner sc = new Scanner(System.in);
 
-		ValidatorCpf.validatecpf(cpf);
+			System.out.print("Digite o CPF que deseja validar: ");
+			String cpf = sc.nextLine();
+
+			ValidatorCpf.validatecpf(cpf);
+		}
+		catch (NumberFormatException e){
+			System.out.println("Digite apenas números!");
+		}
 	}
 }
