@@ -2,7 +2,7 @@
 	// Estudado e contruido por Matheus HB Melo - ADS/SENAC
  */
 
-package Application;
+package application;
 
 import validator.ValidatorCpf;
 
