@@ -20,10 +20,10 @@ public class Main {
 			System.out.print("Digite o CPF que deseja validar: ");
 			String cpf = sc.nextLine();
 
-			ValidatorCpf.validatecpf(cpf);
+			ValidatorCpf.validarCPF(cpf);
 		}
 		catch (NumberFormatException e){
-			System.out.println("Digite apenas números!");
+			System.out.println("ERRO: Digite apenas números!");
 		}
 	}
 }

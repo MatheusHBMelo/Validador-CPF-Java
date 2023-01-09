@@ -1,15 +1,15 @@
 package validator;
 
 public class ValidatorCpf {
-    public static String confere;
+    public static String cpfValido;
 
-    public static void validatecpf(String cpf){
+    public static void validarCPF(String cpf){
         cpf = retiraCaracteresEspeciais(cpf);
         validaConteudoDoCPF(cpf);
-        validaNumerosRepetidos(cpf);
-        digitos(cpf);
+        validaNumerosRepetidosCPF(cpf);
+        digitosFinaisDoCPF(cpf);
 
-        if (confere.equals(cpf)){
+        if (cpfValido.equals(cpf)){
             System.out.println("O cpf digitado é válido!");
         } else {
             System.out.println("O cpf digitado é inválido!");
@@ -28,15 +28,11 @@ public class ValidatorCpf {
         }
     }
 
-    public static void validaNumerosRepetidos(String cpf){
+    public static void validaNumerosRepetidosCPF(String cpf){
         char temp = cpf.charAt(0);
         boolean repetido = false;
         for (int i = 1; i < cpf.length(); i++) {
-            if (temp == cpf.charAt(i)){
-                repetido = true;
-            }else {
-                repetido = false;
-            }
+            repetido = temp == cpf.charAt(i);
         }
         if (repetido){
             System.out.println("Inválido, o CPF digitado possui todos os digitos iguais.");
@@ -44,7 +40,7 @@ public class ValidatorCpf {
         }
     }
 
-    public static String digitos(String cpf){
+    public static void digitosFinaisDoCPF(String cpf){
         String s1 = cpf.substring(0, 1); int n1 = Integer.parseInt(s1);
         String s2 = cpf.substring(1, 2); int n2 = Integer.parseInt(s2);
         String s3 = cpf.substring(2, 3); int n3 = Integer.parseInt(s3);
@@ -69,8 +65,6 @@ public class ValidatorCpf {
             digito2 = 11 - (digito2 % 11);
         }
 
-        confere = (s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8 + s9 + digito1 +  digito2);
-
-        return confere;
+        cpfValido = (s1 + s2 + s3 + s4 + s5 + s6 + s7 + s8 + s9 + digito1 +  digito2);
     }
 }
