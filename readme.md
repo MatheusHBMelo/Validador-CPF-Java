@@ -1,4 +1,4 @@
-# Olá, este repositório é referente a uma atividade sobre a linguagem Java
+# Olá, este repositório é referente a uma atividade sobre a linguagem Java feita durante a graduação
 
 ## “Código para validação de CPF”
 
